@@ -1,0 +1,19 @@
+const test =  function (arg1,arg2){
+    console.log(this);
+    console.log(arg1);
+    console.log(arg2);
+}
+
+const test1 = function (arg1,arg2,arg3) {
+    console.log(this);
+    console.log(arg1);
+    console.log(arg2);
+    console.log(arg3);
+}
+
+const ourFunction = function(item, method, args){
+    method.apply(item,args);
+  }
+  const item = "sudhanshu";
+  ourFunction(item,test, ['argument1', 'argument2'])
+  ourFunction(item,test1, ['argument1', 'argument2', 'argument3'])
